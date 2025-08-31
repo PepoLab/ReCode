@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard do Doador</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .progress-bar {
+            background-color: #e5e7eb;
+            border-radius: 9999px;
+            overflow: hidden;
+            height: 0.75rem;
+        }
+        
+        .progress-fill {
+            background-color: #3b82f6;
+            height: 100%;
+            border-radius: 9999px;
+            transition: width 0.3s ease;
+            width: 60%;
+        }
+        
+        /* Ícones SVG customizados para substituir Lucide React */
+        .icon-package {
+            width: 24px;
+            height: 24px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+        
+        .icon-plus {
+            width: 18px;
+            height: 18px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+        
+        .icon-clock {
+            width: 20px;
+            height: 20px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+        
+        .icon-check {
+            width: 20px;
+            height: 20px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50 p-6">
+    <header class="mb-6">
+        <h1 class="text-2xl font-bold text-gray-800">Dashboard do Doador</h1>
+        <p class="text-gray-500 text-sm">Gerencie suas doações de dispositivos</p>
+    </header>
+
+    <!-- Card de ação principal -->
+    <div class="mb-6 bg-white rounded-lg shadow-md">
+        <div class="p-6 flex items-center justify-between">
+            <div>
+                <h2 class="text-lg font-semibold text-gray-800">Cadastrar novo dispositivo</h2>
+                <p class="text-gray-500 text-sm">Doe celular, notebook, tablet ou acessórios</p>
+            </div>
+            <button class="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors">
+                <svg class="icon-plus" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="16"></line>
+                    <line x1="8" y1="12" x2="16" y2="12"></line>
+                </svg>
+                Nova Doação
+            </button>
+        </div>
+    </div>
+
+    <!-- Lista de doações em andamento -->
+    <h2 class="text-lg font-semibold mb-3">Minhas Doações</h2>
+    <div class="grid gap-4">
+        <!-- Doação 1 - Aguardando retirada -->
+        <div class="bg-white rounded-lg shadow-sm">
+            <div class="p-4 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <svg class="icon-package text-blue-500" viewBox="0 0 24 24">
+                        <path d="m7.5 4.27 9 5.15"></path>
+                        <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path>
+                        <path d="m3.3 7 8.7 5 8.7-5"></path>
+                        <path d="M12 22V12"></path>
+                    </svg>
+                    <div>
+                        <p class="font-medium text-gray-800">Notebook Dell Inspiron</p>
+                        <p class="text-sm text-gray-500">Status: Aguardando retirada</p>
+                    </div>
+                </div>
+                <svg class="icon-clock text-yellow-500" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Doação 2 - Entregue -->
+        <div class="bg-white rounded-lg shadow-sm">
+            <div class="p-4 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <svg class="icon-package text-green-500" viewBox="0 0 24 24">
+                        <path d="m7.5 4.27 9 5.15"></path>
+                        <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path>
+                        <path d="m3.3 7 8.7 5 8.7-5"></path>
+                        <path d="M12 22V12"></path>
+                    </svg>
+                    <div>
+                        <p class="font-medium text-gray-800">Smartphone Samsung A20</p>
+                        <p class="text-sm text-gray-500">Status: Entregue</p>
+                    </div>
+                </div>
+                <svg class="icon-check text-green-600" viewBox="0 0 24 24">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- Impacto social -->
+    <div class="mt-8">
+        <h2 class="text-lg font-semibold mb-2">Impacto Social</h2>
+        <p class="text-sm text-gray-500 mb-3">Você já contribuiu com 3 dispositivos</p>
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        <p class="text-xs text-gray-400 mt-1">Meta: 5 doações este ano</p>
+    </div>
+</body>
+</html>
