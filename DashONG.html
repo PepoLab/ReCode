@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard ONG</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9fafb;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    h1, h2 {
+      margin: 0 0 10px 0;
+    }
+    header {
+      margin-bottom: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    button {
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 16px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #1e40af;
+    }
+    .item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+    .item:last-child {
+      border-bottom: none;
+    }
+    .status {
+      font-size: 14px;
+      font-weight: bold;
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+    .status.aguardando { background: #fef9c3; color: #92400e; }
+    .status.aprovado { background: #d1fae5; color: #065f46; }
+    .status.entregue { background: #dcfce7; color: #166534; }
+    .progress {
+      height: 12px;
+      background: #e5e7eb;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .progress-bar {
+      height: 100%;
+      width: 50%;
+      background: #2563eb;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📦 Dashboard da ONG</h1>
+    <p>Gerencie os dispositivos recebidos e solicitados</p>
+  </header>
+
+  <!-- Card Solicitar Dispositivo -->
+  <div class="card">
+    <div class="card-header">
+      <div>
+        <h2>Solicitar dispositivo</h2>
+        <p style="color:#555; font-size:14px;">Peça celulares, notebooks, tablets ou acessórios</p>
+      </div>
+      <button>+ Nova Solicitação</button>
+    </div>
+  </div>
+
+  <!-- Lista de Solicitações -->
+  <h2>Minhas Solicitações</h2>
+  <div class="card">
+    <div class="item">
+      <span>Notebook Dell Inspiron</span>
+      <span class="status aguardando">Aguardando</span>
+    </div>
+    <div class="item">
+      <span>Smartphone Samsung A20</span>
+      <span class="status aprovado">Aprovado</span>
+    </div>
+    <div class="item">
+      <span>Tablet Lenovo M10</span>
+      <span class="status entregue">Entregue</span>
+    </div>
+  </div>
+
+  <!-- Impacto Social -->
+  <div class="card">
+    <h2>Impacto Social</h2>
+    <p style="color:#555; font-size:14px;">Sua ONG já recebeu 8 dispositivos</p>
+    <div class="progress">
+      <div class="progress-bar"></div>
+    </div>
+    <p style="font-size:12px; color:#777; margin-top:5px;">Meta: 15 recebimentos este ano</p>
+  </div>
+
+</body>
+</html>
